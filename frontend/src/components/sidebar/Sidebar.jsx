@@ -1,3 +1,4 @@
+import Conversations from "./Conversations"
 import SearchInput from "./searchInput"
 
 function Sidebar() {
@@ -5,6 +6,7 @@ function Sidebar() {
     <div>
 
         <SearchInput />
+        <Conversations />
         <div className="divider px-3"></div>
     </div>
   )
