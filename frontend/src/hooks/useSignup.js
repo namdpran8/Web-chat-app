@@ -42,7 +42,9 @@ function handleInputErrors({ fullName, username, password, confirmPassword, gend
 	}
 
 	if (password !== confirmPassword) {
-		toast.error("Passwords do not match");
+		console.log("error here ");
+		
+		toast.error("Passwords do not match 1");
 		return false;
 	}
 
