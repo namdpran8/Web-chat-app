@@ -1,6 +1,6 @@
-import Conversations from "./Conversations"
-import LogoutButton from "./LogoutButton"
-import SearchInput from "./searchInput"
+import Conversations from "../../components/sidebar/Conversations"
+import LogoutButton from "../../components/sidebar/LogoutButton"
+import SearchInput from "../../sidebar/searchInput"
 
 function Sidebar() {
   return (
