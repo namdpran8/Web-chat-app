@@ -1,37 +1,40 @@
 import jwt from "jsonwebtoken";
 import User from "../models/usermodel.js";
 
-const protectRoute =async (req , res , next) => {
+// Middleware function to protect routes by ensuring the user is authenticated
+const protectRoute = async (req, res, next) => {
     try {
+        // Get the token from cookies
         const token = req.cookies.jwt;
         if (!token) {
-            console.log("unauthorized - no token found");
-            return res.status(401).json({error:"unauthorized - no token found"});            
+            console.log("Unauthorized - no token found");
+            return res.status(401).json({ error: "Unauthorized - no token found" });
         }
 
-        const decodeed = jwt.verify(token , process.env.JWT_SECRET);
+        // Verify the token using the secret key
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-        if(!decodeed) {
-            console.log("unauthorized - token not authoised");            
-            return res.status(402).json({error:"unauthorized - token not authoised"});
+        if (!decoded) {
+            console.log("Unauthorized - token not authorized");
+            return res.status(401).json({ error: "Unauthorized - token not authorized" });
         }
 
-        const user = await User.findById(decodeed.userId).select("-password");
+        // Find the user by the ID from the decoded token, excluding password field
+        const user = await User.findById(decoded.userId).select("-password");
 
-        if(!user) {
-            console.log("unauthorized - user not found");            
-            return res.status(402).json({error:"unauthorized - user not found"});
+        if (!user) {
+            console.log("Unauthorized - user not found");
+            return res.status(401).json({ error: "Unauthorized - user not found" });
         }
 
-
-        req.user = user //authenticaded user
-        next();
+        // Attach the user object to the request object
+        req.user = user; // Authenticated user
+        next(); // Proceed to the next middleware or route handler
 
     } catch (error) {
-        console.log("error in protect route middleware" , error.message);        
-        res.send(500).json({error:"Internal server error at authentcation"})
+        console.log("Error in protect route middleware:", error.message);
+        res.status(500).json({ error: "Internal server error at authentication" });
     }
-}
-
+};
 
 export default protectRoute;

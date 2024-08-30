@@ -1,0 +1,34 @@
+/* src/components/home/Home.css */
+#home {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .sidebar,
+  .message-container {
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+  }
+  
+  .sidebar {
+    /* Sidebar's width for mobile view */
+    width: 80%; /* Adjust as needed */
+  }
+  
+  .message-container {
+    /* Message container's width for mobile view */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+  
+  .sidebar.hide {
+    transform: translateX(-100%);
+  }
+  
+  .message-container.show {
+    transform: translateX(0);
+  }
+  
