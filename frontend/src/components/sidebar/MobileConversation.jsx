@@ -1,14 +1,13 @@
+/* eslint-disable react/prop-types */
+
 import useGetConversations from "../../hooks/useGetConversations";
 import { getRandomEmoji } from "../../utils/emojis";
 import Conversation from "./Conversation";
 
-/**
- * Conversations component fetches and displays a list of conversations.
- * 
- * @returns {JSX.Element} - The rendered component
- */
-const Conversations = () => {
-	// Destructure loading state and conversations from the custom hook
+
+function MobileConversation(){
+	
+  // Destructure loading state and conversations from the custom hook
 	const { loading, conversations } = useGetConversations();
 	
 	// Log the list of conversations to the console for debugging
@@ -30,6 +29,6 @@ const Conversations = () => {
 			{loading ? <span className='loading loading-spinner mx-auto'></span> : null}
 		</div>
 	);
-};
+}
 
-export default Conversations;
+export default MobileConversation
