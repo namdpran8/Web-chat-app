@@ -6,7 +6,6 @@ import SignUp from "./pages/signup/SignUp";
 import { Toaster } from "react-hot-toast";
 import { useAuthContext } from "./context/AuthContext";
 import MainComponent from "./pages/home/pageselector";
-import MobileMessageContainer from "./components/messages/MobileMessageContainer";
 
 function App() {
 	const { authUser } = useAuthContext();
