@@ -4,14 +4,15 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon backend/server.js",
-		"start": "node backend/server.js",
-		"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+    "start": "node backend/server.js",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
   },
   "type": "module",
   "author": "Pranshu Namdeo",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@fluentui/react-tabs": "^9.4.30",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.4.5",

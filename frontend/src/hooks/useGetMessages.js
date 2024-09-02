@@ -10,7 +10,8 @@ import toast from "react-hot-toast";
 const useGetMessages = () => {
 	const [loading, setLoading] = useState(false); // State to track loading status
 	const { messages, setMessages, selectedConversation } = useConversation(); // Get conversation data and state management functions
-
+	console.log("Usegetmessage");
+	
 	useEffect(() => {
 		/**
 		 * Fetch messages from the server based on the selected conversation.
