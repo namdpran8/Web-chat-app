@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
-import useGetConversations from "../../hooks/useGetConversations";
+import MobileuseGetConversations from "../../hooks/MobileuseGetConversations";
+
 import { getRandomEmoji } from "../../utils/emojis";
 import Conversation from "./Conversation";
 
@@ -8,7 +9,7 @@ import Conversation from "./Conversation";
 function MobileConversation(){
 	
   // Destructure loading state and conversations from the custom hook
-	const { loading, conversations } = useGetConversations();
+	const { loading, conversations } = MobileuseGetConversations();
 	
 	// Log the list of conversations to the console for debugging
 	//console.log("Conversation "+conversations);

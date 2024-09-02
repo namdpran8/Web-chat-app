@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-//it will load users for side bar 
-/**
- * Custom hook to fetch and manage user conversations.
- * 
- * @returns {Object} - The hook's state containing loading status and conversations
- */
-const useGetConversations = () => {
-	const [loading, setLoading] = useState(false); // State to track loading status
-	const [conversations, setConversations] = useState([]); // State to hold the list of conversations
 
+
+
+function MobileuseGetConversations() {	const [loading, setLoading] = useState(false); // State to track loading status
+	const [conversations, setConversations] = useState([]); // State to hold the list of conversations
+    console.log("MobilegetConvesaton");
+    
 	useEffect(() => {
 		/**
 		 * Fetch conversations from the server and handle the response.
@@ -36,4 +33,4 @@ const useGetConversations = () => {
 	return { loading, conversations }; // Return loading status and fetched conversations
 };
 
-export default useGetConversations;
+export default MobileuseGetConversations;

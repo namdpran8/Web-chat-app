@@ -7,3 +7,5 @@ const router = express.Router();
 router.get("/", protectRoute, getUsersForSidebar);
 
 export default router;
+
+//get users for sidebar
