@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { IoSearchSharp } from "react-icons/io5";
-import useConversation from "../../sort/useConversation";
+import useConversation from "../../store/useConversation";
 import useGetConversations from "../../hooks/useGetConversations";
 import toast from "react-hot-toast";
 

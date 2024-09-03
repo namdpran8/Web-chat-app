@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import useConversation from "../sort/useConversation";
+import useConversation from "../store/useConversation";
 import toast from "react-hot-toast";
 
 /**

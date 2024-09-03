@@ -10,7 +10,7 @@ const MobileComponent = () => {
         <div className="mobile-view-container">
             <MobileSidebar/>
         </div>
-        <div className='hidden'>
+        <div className=''>
             <MobileMessageContainer />
         </div>
         </>

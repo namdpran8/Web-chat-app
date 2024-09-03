@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useSocketContext } from "../../context/SocketContext";
-import useConversation from "../../sort/useConversation";
+import useConversation from "../../store/useConversation";
 
 /**
  * Conversation component displays a single conversation item in the list.

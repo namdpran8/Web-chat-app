@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useAuthContext } from "../../context/AuthContext";
 import { extractTime } from "../../utils/extractTime";
-import useConversation from "../../sort/useConversation";
+import useConversation from "../../store/useConversation";
 
 /**
  * Message component displays an individual message in the chat.

@@ -8,7 +8,7 @@ import SearchInput from "../SearchInput";
 
 function MobileSidebar() {
     return (
-        <div className="flex flex-col h-screen bg-background">
+        <div className="flex flex-col h-screen bg-background ">
             <div className="p-4">
                 <div className="relative">
                     <SearchInput />
